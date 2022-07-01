@@ -78,7 +78,7 @@
   align-items: center;
   flex-direction: column;
   height: 250px;
-  background-color: #066163;
+  background-color: #020202;
 }
 #article h2 {
   text-align: center;
@@ -149,20 +149,22 @@
   font-size: 20px;
   text-align: center;
 }
-#article-2 button {
+#article-2 #button-transparent {
   color: #fff;
   background-color: transparent;
   border: 2px solid #fff;
   font-weight: 400;
   margin-top: 5px;
   letter-spacing: 1px;
+  text-decoration: none;
   text-align: center;
   transition: all 300ms;
   padding: 10px;
 }
-#article-2 button:hover {
+#article-2 #button-transparent:hover {
   background-color: #fff;
   color: #34312f;
+  cursor: pointer;
 }
 
 #footer {
@@ -279,7 +281,7 @@ hr {
   flex-wrap: wrap;
   justify-content: center;
   margin-top: 20px;
-  background-color: #066163;
+  background-color: #020202;
   box-shadow: 1px 1px 4px black;
   padding: 10px;
   gap: 20px;
@@ -328,27 +330,47 @@ hr {
   display: flex;
   flex-direction: row;
   justify-content: space-around;
-  margin-top: 100px;
+  margin-top: 75px;
 }
-#servicios_todos .btn {
+#servicios_todos .servicios .art_completo .art_min {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  width: 100%;
+  padding: 20px;
+}
+#servicios_todos .servicios .art_completo .art_min h4 {
+  font-size: 35px;
+  text-align: start;
+  margin-bottom: 20px;
+  color: #212121;
+}
+#servicios_todos .servicios .art_completo .art_min p {
+  font-size: 20px;
+  text-align: left;
+  color: #212121;
+}
+#servicios_todos #button-services {
   text-align: center;
   background-color: transparent;
   border: 2px solid #212121;
   border-radius: 0px;
   color: #212121;
   font-weight: 400;
+  text-decoration: none;
   letter-spacing: 1px;
   margin-top: 50px;
   margin-bottom: 50px;
   transition: all 300ms;
   padding: 10px;
 }
-#servicios_todos button:hover {
-  background-color: #066163;
+#servicios_todos #button-services:hover {
+  background-color: #020202;
   color: #fff;
+  border-color: #020202;
 }
 #servicios_todos hr {
-  color: #066163;
+  color: #020202;
   width: 60%;
   height: 2px;
 }

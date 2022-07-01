@@ -21,32 +21,57 @@
             display: flex;
             flex-direction: row;
             justify-content: space-around;
-            margin-top: 100px;            
+            margin-top: 75px;
+
+            
+            .art_min {
+                display: flex;
+                flex-direction: column;
+                justify-content: center;
+                width: 100%;
+                padding: 20px;
+                // background-color: s.$color;
+
+                h4 {
+                    font-size: 35px;
+                    text-align: start;
+                    margin-bottom: 20px;
+                    color: s.$color-6;
+                }
+
+                p {
+                    font-size: 20px;
+                    text-align: left;
+                    color: s.$color-6;
+
+                }
+            }
         }
         
     }
 
     
-    .btn{
+    #button-services{
         text-align: center;
         background-color: transparent;
         border: 2px solid s.$color-6;
         border-radius: 0px;
         color: s.$color-6;
         font-weight: 400;
-        // font-family: 'Lucida Sans';
-        // margin-top: px;
+        text-decoration: none;
         letter-spacing: 1px;
         margin-top: 50px;
         margin-bottom: 50px;
         transition: all 300ms;
         padding: 10px;
+        
+        &:hover{
+            background-color: s.$color-7;
+            color: #fff;
+            border-color:s.$color-7;
+        }
     }
     
-    button:hover{
-        background-color: s.$color-7;
-        color: #fff;
-    }
     
     hr{
         color: s.$color-7;
