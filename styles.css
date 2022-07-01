@@ -1,0 +1,356 @@
+.navbar {
+  background-color: #212121;
+  padding: 5px;
+  position: fixed;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  align-items: center;
+  width: 100%;
+  height: 120px;
+  z-index: 3;
+  transition: all 300ms;
+}
+.navbar.active {
+  background-color: #034344;
+  height: 70px;
+}
+.navbar.active #logo {
+  width: 100px;
+}
+.navbar.active #menu a {
+  font-size: 15px;
+}
+.navbar #logo {
+  width: 200px;
+  transition: all 200ms;
+}
+.navbar #menu {
+  flex-grow: 1;
+  margin-left: 20px;
+  width: 50%;
+}
+.navbar #menu ul {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: flex-end;
+  list-style: none;
+  margin-bottom: 0px;
+}
+.navbar #menu ul li {
+  margin: 10px;
+}
+.navbar #menu ul li a {
+  font-size: 20px;
+  color: #fff;
+  text-decoration: none;
+  transition: all 300ms;
+}
+.navbar #menu ul li a:hover {
+  color: #CDBE78;
+}
+
+#relleno {
+  background-color: #212121;
+  width: 100%;
+  height: 120px;
+}
+
+#carousel {
+  position: relative;
+}
+
+.h3-carousel {
+  text-shadow: 2px 2px 3px black;
+}
+
+.p-carousel {
+  text-shadow: 2px 2px 3px black;
+}
+
+#article {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  align-items: center;
+  flex-direction: column;
+  height: 250px;
+  background-color: #066163;
+}
+#article h2 {
+  text-align: center;
+  color: white;
+  text-shadow: 2px 2px 3px black;
+  font-size: 50px;
+}
+#article p {
+  position: relative;
+  color: white;
+  text-shadow: 2px 2px 3px black;
+  font-size: 20px;
+  text-align: center;
+}
+
+#article-clientes {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  align-items: center;
+  width: 100%;
+  height: 300px;
+  padding: 10px;
+}
+#article-clientes h2 {
+  color: #212121;
+  font-size: 40px;
+  text-shadow: 1px 1px 3px grey;
+}
+#article-clientes img {
+  width: 130px;
+}
+#article-clientes .container-client {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  gap: 40px;
+  padding-bottom: 10px;
+}
+#article-clientes .img-client {
+  box-shadow: 1px 1px 3px grey;
+}
+
+#article-2 {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  height: 400px;
+}
+#article-2 #v-carretera {
+  position: absolute;
+  z-index: -1;
+  width: 100%;
+}
+#article-2 h2 {
+  margin-top: 50px;
+  margin-bottom: 50px;
+  text-align: center;
+  color: white;
+  text-shadow: 2px 2px 3px black;
+  font-size: 30px;
+}
+#article-2 p {
+  color: white;
+  text-shadow: 2px 2px 3px black;
+  font-size: 20px;
+  text-align: center;
+}
+#article-2 button {
+  color: #fff;
+  background-color: transparent;
+  border: 2px solid #fff;
+  font-weight: 400;
+  margin-top: 5px;
+  letter-spacing: 1px;
+  text-align: center;
+  transition: all 300ms;
+  padding: 10px;
+}
+#article-2 button:hover {
+  background-color: #fff;
+  color: #34312f;
+}
+
+#footer {
+  width: 100%;
+  height: 180px;
+  background-color: #212121;
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+#footer #footer-container {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: space-evenly;
+  align-content: center;
+}
+#footer #footer-container ul {
+  padding-left: 0px;
+  margin-bottom: 0px;
+}
+#footer #footer-container li {
+  list-style: none;
+}
+#footer #footer-container a {
+  text-decoration: none;
+  color: #fff;
+  transition: all 300ms;
+}
+#footer #footer-container #info {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  align-content: center;
+  align-items: center;
+  gap: 40px;
+}
+#footer #footer-container #info img {
+  width: 200px;
+}
+#footer #footer-container #info p {
+  font-size: 20px;
+  color: #fff;
+}
+#footer #footer-container #redes {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  align-content: center;
+  align-items: center;
+  gap: 40px;
+}
+#footer #footer-container #redes ul {
+  display: flex;
+  gap: 40px;
+}
+#footer #footer-container #redes ul li a {
+  font-family: "WebSymbolsRegular";
+  font-size: 30px;
+  color: #fff;
+}
+#footer #footer-container #redes ul li a:hover {
+  color: #CDBE78;
+}
+#footer #footer-container #redes p {
+  font-size: 20px;
+  color: #fff;
+}
+
+* {
+  padding: 0px;
+  margin: 0px;
+  font-family: "DM Serif Display", serif;
+  letter-spacing: 1px;
+}
+
+hr {
+  color: #96663D;
+  width: 60%;
+  height: 2px;
+}
+
+#article-3 {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  height: 300px;
+  background-image: url("../../assets/imgs/edificio atardecer.jpeg");
+  background-position: center;
+}
+#article-3 h2 {
+  color: white;
+  text-shadow: 2px 2px 3px black;
+  font-size: 50px;
+}
+
+#formulario {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  margin-top: 20px;
+  margin-bottom: 20px;
+}
+#formulario #form {
+  height: 500px;
+  width: 40%;
+  display: flex;
+  align-content: center;
+  align-items: center;
+  flex-direction: column;
+  flex-wrap: wrap;
+  justify-content: center;
+  margin-top: 20px;
+  background-color: #066163;
+  box-shadow: 1px 1px 4px black;
+  padding: 10px;
+  gap: 20px;
+}
+#formulario #form .labelForm {
+  align-self: flex-start;
+  color: #fff;
+  font-size: 20px;
+}
+#formulario #form .inputForm {
+  width: 90%;
+  padding: 10px;
+}
+#formulario #form #textArea {
+  width: 90%;
+  height: 100px;
+  padding: 5px;
+}
+#formulario #form button {
+  color: #fff;
+  background-color: transparent;
+  border: 2px solid #fff;
+  font-weight: 400;
+  letter-spacing: 1px;
+  text-align: center;
+  transition: all 300ms;
+  padding: 10px;
+}
+#formulario #form button:hover {
+  background-color: #fff;
+  color: #34312f;
+}
+
+#servicios_todos {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 100%;
+}
+#servicios_todos .servicios {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+}
+#servicios_todos .servicios .art_completo {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  margin-top: 100px;
+}
+#servicios_todos .btn {
+  text-align: center;
+  background-color: transparent;
+  border: 2px solid #212121;
+  border-radius: 0px;
+  color: #212121;
+  font-weight: 400;
+  letter-spacing: 1px;
+  margin-top: 50px;
+  margin-bottom: 50px;
+  transition: all 300ms;
+  padding: 10px;
+}
+#servicios_todos button:hover {
+  background-color: #066163;
+  color: #fff;
+}
+#servicios_todos hr {
+  color: #066163;
+  width: 60%;
+  height: 2px;
+}
+
+/*# sourceMappingURL=styles.css.map */

@@ -1,0 +1,57 @@
+@use './settings' as s;
+
+#servicios_todos {
+    
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    
+    width: 100%;
+
+
+
+    .servicios {
+        display: flex;
+        flex-direction: column;
+
+        width: 100%;
+        
+        
+        .art_completo {
+            display: flex;
+            flex-direction: row;
+            justify-content: space-around;
+            margin-top: 100px;            
+        }
+        
+    }
+
+    
+    .btn{
+        text-align: center;
+        background-color: transparent;
+        border: 2px solid s.$color-6;
+        border-radius: 0px;
+        color: s.$color-6;
+        font-weight: 400;
+        // font-family: 'Lucida Sans';
+        // margin-top: px;
+        letter-spacing: 1px;
+        margin-top: 50px;
+        margin-bottom: 50px;
+        transition: all 300ms;
+        padding: 10px;
+    }
+    
+    button:hover{
+        background-color: s.$color-7;
+        color: #fff;
+    }
+    
+    hr{
+        color: s.$color-7;
+        width: 60%;
+        height: 2px;
+    }
+}
+
