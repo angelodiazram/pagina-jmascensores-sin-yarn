@@ -78,7 +78,7 @@
   align-items: center;
   flex-direction: column;
   height: 250px;
-  background-color: #020202;
+  background-color: #045455;
 }
 #article h2 {
   text-align: center;
@@ -281,7 +281,7 @@ hr {
   flex-wrap: wrap;
   justify-content: center;
   margin-top: 20px;
-  background-color: #020202;
+  background-color: #045455;
   box-shadow: 1px 1px 4px black;
   padding: 10px;
   gap: 20px;
@@ -365,12 +365,12 @@ hr {
   padding: 10px;
 }
 #servicios_todos #button-services:hover {
-  background-color: #020202;
+  background-color: #045455;
   color: #fff;
-  border-color: #020202;
+  border-color: #045455;
 }
 #servicios_todos hr {
-  color: #020202;
+  color: #045455;
   width: 60%;
   height: 2px;
 }
