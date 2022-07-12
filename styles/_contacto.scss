@@ -10,6 +10,7 @@ $img-atardecer: url('./assets/imgs/edificio_atardecer.jpeg');
     letter-spacing: 1px;
 }
 
+
 hr{
     color: s.$color-h;
     width: 60%;
@@ -25,6 +26,8 @@ hr{
     height: 300px;
     background-image: $img-atardecer;
     background-position: center;
+    background-size: cover;
+
 
     h2{
         color: white;
@@ -92,7 +95,27 @@ hr{
             background-color: #fff;
             color: #34312f;
         }
-    
     }
-
 }
+
+@media screen and (max-width: 320px){
+    
+    #article-3 {
+        height: 150px;
+        background-size: cover;
+
+        h2{
+            font-size: 30px;
+            text-align: center;
+        }
+    } 
+    
+    #formulario {
+
+        #form {
+            width: 90%;
+        }
+    }
+}
+
+

@@ -20,22 +20,32 @@
         
         <!-- HOJA DE ESTILOS -->
         <link rel="stylesheet" type="text/css" href="./styles.css">
+
+        <!-- FONT AWESOME -->
+        <script src="https://kit.fontawesome.com/cd0dbc4925.js" crossorigin="anonymous"></script>
     </head>
 
     <body>
         <!-- INICIO DE CABECERA-->
-        <header>    
-            <div class="navbar">
-                <img id="logo" src="assets/imgs/logo-b-sf-ajust.png" alt="JM Ascensores" title="jmascensores">
-                <nav id="menu">
-                    <ul>
-                        <li><a href="./index.html">Inicio</a></li>
-                        <li><a href="./pages/nosotros/nosotros.html">Quienes somos</a></li>
-                        <li><a href="./pages/servicios/servicios.html">Servicios</a></li>
-                        <li><a href="./pages/contacto/contacto.html">Contacto</a></li>
-                    </ul>
-                </nav>
-            </div>
+        <header class="header">
+
+            <nav class="nav">
+                <a href="./index.html">
+                    <img class="logo" src="assets/imgs/logo-b-sf-ajust.png" alt="JM Ascensores" title="jmascensores">
+                </a>
+
+                <button class="navbar-toggle">
+                    <i class="fa-solid fa-bars"></i>
+                </button>
+                
+                <ul class="nav-menu">
+                    <li class="nav-menu-item"><a href="./index.html" class="navbar-link">Inicio</a></li>
+                    <li class="nav-menu-item"><a href="./pages/nosotros/nosotros.html" class="navbar-link">Quienes somos</a></li>
+                    <li class="nav-menu-item"><a href="./pages/servicios/servicios.html" class="navbar-link">Servicios</a></li>
+                    <li class="nav-menu-item"><a href="./pages/contacto/contacto.html" class="navbar-link">Contacto</a></li>
+                </ul>
+            </nav>
+
         </header>
         <!-- FIN DE CABECERA-->
         <div id="relleno">
@@ -170,6 +180,7 @@
                         Santiago
                     </p>
                 </div>
+                
                 <div id="redes">
                     <ul>
                         <li><a href="">l</a></li>

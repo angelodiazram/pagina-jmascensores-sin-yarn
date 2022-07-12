@@ -1,0 +1,39 @@
+@use './settings' as s;
+
+.article-nosotros {
+
+    width: 100%;
+    padding: 25px;
+
+    #info-nosotros {
+        width: 100%;
+        min-height: 500px;
+        background-color: #fff;
+    
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        gap: 40px;
+
+
+        p {
+            padding: 25px;
+            text-align: justify;
+            font-size: 20px;
+            border: 1.5px solid s.$color-8;
+    
+            .resaltado {
+                font-weight: bold;
+                color: s.$color-7;
+            }
+        }
+    
+        img {
+            width: 80%;
+            margin-bottom: 20px;
+        }
+    }
+}
+
+
