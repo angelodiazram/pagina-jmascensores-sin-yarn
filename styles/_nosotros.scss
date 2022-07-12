@@ -36,43 +36,96 @@
     }
 }
 
-@media screen and (max-width: 320px){
-    
-    .article-nosotros {
+@media screen and (max-width: 1024px){
+    #footer {
+        #footer-container {
 
-        padding: 10px;
-
-        #info-nosotros {
-
-            p {
-                font-size: 15px;
-                padding: 10px;
-            }
-
-            img{
-                width: 100%;
-            }
-
-        }
-
-        .developer {
             width: 100%;
-            height: 40px;
-            background-color: s.$color-7;
+            #info {
+                width: 100%;
+                display: flex;
+                flex-direction: row;
+                justify-content: space-between;
+                margin: 20px 35px;
+                
+                p {
+                    margin-bottom: 0px;
+                    text-align: end;
+                }
+            }
+            
+            #redes {
+                width: 100%;
+                justify-content: space-between;
+                margin: 0px 35px;
+                margin-bottom: 15px;
 
-            p {
-                color: #fff;
-                font-family: sans-serif;
-                text-align: center;
-                line-height: 40px;
+
+                p {
+                    text-align: end;
+                }
             }
         }
+    }
+}
 
+@media screen and (max-width: 768px){
+
+    #article-3{
+        height: 200px;
+        background-size: cover;
     }
 
+    .article-nosotros{
+        #info-nosotros {
+            img{
+                width: 100%;
+            }            
+        }
+    }
+
+    #footer {
+        #footer-container {
+
+            width: 100%;
+            #info {
+                width: 100%;
+                display: flex;
+                flex-direction: row;
+                justify-content: space-between;
+                margin: 20px 35px;
+
+                p {
+                    margin-bottom: 0px;
+                    text-align: end;
+                }
+            }
+
+            #redes {
+                width: 100%;
+                justify-content: space-around;
+                margin-bottom: 10px;
+
+
+                p {
+                    text-align: end;
+                }
+            }
+        }
+    }
 }
 
 @media screen and (max-width: 480px){
+
+    #article-3 {
+        height: 150px;
+        background-size: cover;
+
+        h2 {
+            font-size: 40px;
+            text-align: center;
+        }
+    }
 
     .article-nosotros {
         padding: 10px;
@@ -118,6 +171,50 @@
 
                 p{
                     text-align: center;
+                }
+            }
+        }
+    }
+
+}
+
+@media screen and (max-width: 320px){
+
+    #article-3 {
+        height: 150px;
+        background-size: cover;
+
+        h2{
+            font-size: 30px;
+            text-align: center;
+        }
+    }
+
+    .article-nosotros {
+
+        padding: 10px;
+
+        #info-nosotros {
+
+            p {
+                // font-size: 15px;
+                padding: 10px;
+            }
+
+            img{
+                width: 100%;
+            }
+
+        }
+
+
+    }
+
+    #footer {
+        #footer-container {
+            #redes{
+                p {
+                    font-size: 16px;
                 }
             }
         }

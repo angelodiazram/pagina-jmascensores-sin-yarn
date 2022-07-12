@@ -403,6 +403,16 @@ hr {
   color: #34312f;
 }
 
+@media screen and (max-width: 768px) {
+  #formulario #form {
+    width: 60%;
+  }
+}
+@media screen and (max-width: 480px) {
+  #formulario #form {
+    width: 90%;
+  }
+}
 @media screen and (max-width: 320px) {
   #article-3 {
     height: 150px;
@@ -506,30 +516,74 @@ hr {
   margin-bottom: 20px;
 }
 
-@media screen and (max-width: 320px) {
-  .article-nosotros {
-    padding: 10px;
+@media screen and (max-width: 1024px) {
+  #footer #footer-container {
+    width: 100%;
   }
-  .article-nosotros #info-nosotros p {
-    font-size: 15px;
-    padding: 10px;
+  #footer #footer-container #info {
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    margin: 20px 35px;
   }
+  #footer #footer-container #info p {
+    margin-bottom: 0px;
+    text-align: end;
+  }
+  #footer #footer-container #redes {
+    width: 100%;
+    justify-content: space-between;
+    margin: 0px 35px;
+    margin-bottom: 15px;
+  }
+  #footer #footer-container #redes p {
+    text-align: end;
+  }
+}
+@media screen and (max-width: 768px) {
+  #article-3 {
+    height: 200px;
+    background-size: cover;
+  }
+
   .article-nosotros #info-nosotros img {
     width: 100%;
   }
-  .article-nosotros .developer {
+
+  #footer #footer-container {
     width: 100%;
-    height: 40px;
-    background-color: #045455;
   }
-  .article-nosotros .developer p {
-    color: #fff;
-    font-family: sans-serif;
-    text-align: center;
-    line-height: 40px;
+  #footer #footer-container #info {
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    margin: 20px 35px;
+  }
+  #footer #footer-container #info p {
+    margin-bottom: 0px;
+    text-align: end;
+  }
+  #footer #footer-container #redes {
+    width: 100%;
+    justify-content: space-around;
+    margin-bottom: 10px;
+  }
+  #footer #footer-container #redes p {
+    text-align: end;
   }
 }
 @media screen and (max-width: 480px) {
+  #article-3 {
+    height: 150px;
+    background-size: cover;
+  }
+  #article-3 h2 {
+    font-size: 40px;
+    text-align: center;
+  }
+
   .article-nosotros {
     padding: 10px;
   }
@@ -565,6 +619,30 @@ hr {
   }
   #footer #footer-container #redes p {
     text-align: center;
+  }
+}
+@media screen and (max-width: 320px) {
+  #article-3 {
+    height: 150px;
+    background-size: cover;
+  }
+  #article-3 h2 {
+    font-size: 30px;
+    text-align: center;
+  }
+
+  .article-nosotros {
+    padding: 10px;
+  }
+  .article-nosotros #info-nosotros p {
+    padding: 10px;
+  }
+  .article-nosotros #info-nosotros img {
+    width: 100%;
+  }
+
+  #footer #footer-container #redes p {
+    font-size: 16px;
   }
 }
 

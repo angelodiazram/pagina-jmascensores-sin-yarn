@@ -98,6 +98,24 @@ hr{
     }
 }
 
+@media screen and (max-width: 768px) {
+
+    #formulario {
+        #form {
+            width: 60%;
+        }
+    }
+}
+
+@media screen and (max-width: 480px) {
+
+    #formulario {
+        #form {
+            width: 90%;
+        }
+    }
+}
+
 @media screen and (max-width: 320px){
     
     #article-3 {
@@ -117,5 +135,7 @@ hr{
         }
     }
 }
+
+
 
 
