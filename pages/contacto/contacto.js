@@ -1,6 +1,4 @@
 
-//? navbar scroll:
-
 const header = document.querySelector('.header');
 
 const navbarToggle = document.querySelector('.navbar-toggle');
