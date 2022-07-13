@@ -56,20 +56,20 @@
             
             #redes {
                 width: 100%;
-                justify-content: space-between;
+                justify-content: center;
                 margin: 0px 35px;
                 margin-bottom: 15px;
 
 
                 p {
-                    text-align: end;
+                    text-align: center;
                 }
             }
         }
     }
 }
 
-@media screen and (max-width: 768px){
+@media (min-width: 515px) and (max-width: 768px){
 
     #article-3{
         height: 200px;
@@ -97,7 +97,7 @@
 
                 p {
                     margin-bottom: 0px;
-                    text-align: end;
+                    text-align: center;
                 }
             }
 
@@ -108,11 +108,39 @@
 
 
                 p {
-                    text-align: end;
+                    text-align: center;
                 }
             }
         }
     }
+}
+
+@media (min-width: 481px) and (max-width: 514px) {
+
+    #footer {
+        
+        justify-content: center;
+
+        #footer-container { 
+            width: 100%;
+
+            #info {
+                justify-content: center;
+
+                p {
+                    text-align: center;
+                }
+            }
+
+            #redes {
+                justify-content: center;
+                
+                p {
+                    text-align: center;
+                }
+            }
+        }
+    }      
 }
 
 @media screen and (max-width: 480px){

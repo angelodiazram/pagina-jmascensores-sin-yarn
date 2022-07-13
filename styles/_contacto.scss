@@ -40,11 +40,10 @@ hr{
     width: 100%;
     display: flex;
     justify-content: center;
-    margin-top: 20px;
-    margin-bottom: 20px;
+    margin: 20px 0px;
 
     #form{
-        height: 500px;
+        min-height: 500px;
         width: 40%;
         display: flex;
         align-content: center;
@@ -69,12 +68,20 @@ hr{
         .inputForm{
             width: 90%;
             padding: 10px;
+
+            &:hover {
+                outline: black;
+            }
         }
     
         #textArea{
             width: 90%;
             height: 100px;
             padding: 5px;
+
+            &:hover {
+                outline: none;
+            }
         }
 
         button{
@@ -98,13 +105,15 @@ hr{
     }
 }
 
-@media screen and (max-width: 768px) {
+@media (max-width: 768px)  {
 
     #formulario {
         #form {
-            width: 60%;
+            width: 65%;
         }
     }
+
+
 }
 
 @media screen and (max-width: 480px) {
@@ -132,6 +141,17 @@ hr{
 
         #form {
             width: 90%;
+        }
+    }
+
+    #footer {
+        #footer-container {
+            #redes{
+
+                p {
+                    font-size: 16px;
+                }
+            }
         }
     }
 }
