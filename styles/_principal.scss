@@ -101,100 +101,210 @@ body, html {
 }
 
 //! CODIGO DE ESTILOS CARRUSEL ORIGINAL:
+// .carrusel{
+//     position: relative;
+//     width: 100%;
+//     height: 500px;
+//     overflow: hidden;
+//     display: flex;
+//     align-items: flex-end;
+// }
+
+// .carrusel .contenedor-grande{
+//     position: absolute;
+//     width: 400%;
+//     height: 500px;
+//     display: flex;
+//     flex-flow: row nowrap;
+    
+//     transition: all 300ms ease;
+//     transform: translateX(0%);
+
+// }
+
+// .carrusel .contenedor-grande .carrusel-item {
+//     width: calc(100% /4);
+//     height: 100%;
+    
+//     display: flex;
+//     flex-direction: column;
+//     justify-content: center;
+//     align-items: center;
+//     overflow: hidden;
+    
+// }
+
+// .carrusel .contenedor-grande .carrusel-item .img {
+//     position: relative;
+//     min-height: 100%;
+//     min-width: 100%;
+//     object-fit: cover;
+//     top: 50%;
+//     left: 50%;
+//     transform: translate(-50%, -50%);
+// }
+
+// .carrusel .contenedor-grande .carrusel-item .info{
+//     position: absolute;
+//     width: 100vw;
+//     padding: 0px 10px;
+// }
+
+// .carrusel .contenedor-grande .carrusel-item h3 {
+//     font-size: 40px;
+//     text-align: center;
+//     color: #fff;
+//     text-shadow: 1px 1px 3px black;
+//     object-fit: contain;
+//     padding-bottom: 20px;
+// }
+
+// .carrusel .contenedor-grande .carrusel-item p {
+//     font-size: 20px;
+//     text-align: center;
+//     color: #fff;
+//     text-shadow: 1px 1px 3px black;
+//     object-fit: contain;
+// }
+
+// .carrusel .puntos {
+//     position: absolute;
+//     width: 100%;
+//     background-color: none;
+//     padding: 20px 0px;
+//     gap: 10px;
+//     display: flex;
+//     flex-flow: row wrap;
+//     justify-content: center; 
+// }
+
+// .carrusel .puntos .punto {
+//     width: 20px;
+//     height: 20px;
+//     background-color: transparent;
+//     list-style: none;
+//     border-radius: 50px;
+//     border: 2px solid #fff;
+// }
+
+// .carrusel .puntos .punto.activo {
+//     background-color: s.$color-8;
+//     border: 2px solid s.$color-8;
+// }
+
+// .carrusel .puntos .punto:hover {    
+//     border: 2px solid s.$color-8;
+//     cursor: pointer;
+// }
+
+//? SASS DEL CARRUSEL
+
 .carrusel{
     position: relative;
     width: 100%;
-    height: 450px;
+    height: 500px;
     overflow: hidden;
     display: flex;
     align-items: flex-end;
-}
 
-.carrusel .contenedor-grande{
-    position: absolute;
-    width: 400%;
-    height: 450px;
-    display: flex;
-    flex-flow: row nowrap;
-    
-    transition: all 300ms ease;
-    transform: translateX(0%);
+    .contenedor-grande{
+        position: absolute;
+        width: 400%;
+        height: 500px;
+        display: flex;
+        flex-flow: row nowrap;
 
-}
+        transition: all 300ms ease;
+        transform: translateX(0%);        
+        
+        
+        // #item-1{background-color: red;}
+        // #item-2{background-color: blue}
+        // #item-3{background-color: orange;}
+        // #item-4{background-color: green;}
 
-.carrusel .contenedor-grande .carrusel-item {
-    width: calc(100% /4);
-    height: 100%;
-    
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    overflow: hidden;
-    
-}
+        .carrusel-item{
+            position: relative;
+            width: calc(100% /4);
+            height: 100%;
+            
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
 
-.carrusel .contenedor-grande .carrusel-item .img {
-    position: relative;
-    min-height: 100%;
-    min-width: 100%;
-    object-fit: cover;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-}
+           .img-container {
+                position: absolute;
+                top: 0px;
+                left: 0px;
+                width: 100vw;
+                height: 100%;
+                
 
-.carrusel .contenedor-grande .carrusel-item .info{
-    position: absolute;
-    width: 100vw;
-    padding: 0px 10px;
-}
+                .img {
+                    position: relative;
+                    height: 100%;
+                    width: 100%;
+                    object-fit: cover;
+                    top: 50%;
+                    left: 50%;
+                    transform: translate(-50%, -50%);
+                }     
+            }    
 
-.carrusel .contenedor-grande .carrusel-item h3 {
-    font-size: 40px;
-    text-align: center;
-    color: #fff;
-    text-shadow: 1px 1px 3px black;
-    object-fit: contain;
-    padding-bottom: 20px;
-}
+            .info {
+                    position: relative;
+                    width: 100vw;
+                    padding: 0px 10px;
 
-.carrusel .contenedor-grande .carrusel-item p {
-    font-size: 20px;
-    text-align: center;
-    color: #fff;
-    text-shadow: 1px 1px 3px black;
-    object-fit: contain;
-}
+                h3 {
+                    font-size: 40px;
+                    text-align: center;
+                    color: #fff;
+                    text-shadow: 1px 1px 3px black;
+                    padding-bottom: 20px;
+                }
 
-.carrusel .puntos {
-    position: absolute;
-    width: 100%;
-    background-color: none;
-    padding: 20px 0px;
-    gap: 10px;
-    display: flex;
-    flex-flow: row wrap;
-    justify-content: center; 
-}
+                p{
+                    font-size: 20px;
+                    text-align: center;
+                    color: #fff;
+                    text-shadow: 1px 1px 3px black;
+                }
+            }
+         
+        }
+    }
 
-.carrusel .puntos .punto {
-    width: 20px;
-    height: 20px;
-    background-color: transparent;
-    list-style: none;
-    border-radius: 50px;
-    border: 2px solid #fff;
-}
+    .puntos{
+        position: absolute;
+        width: 100%;
+        background-color: none;
+        padding: 20px 0px;
+        gap: 10px;
+        display: flex;
+        flex-flow: row wrap;
+        justify-content: center;
 
-.carrusel .puntos .punto.activo {
-    background-color: s.$color-8;
-    border: 2px solid s.$color-8;
-}
+        .punto{
+            width: 20px;
+            height: 20px;
+            background-color: transparent;
+            list-style: none;
+            border-radius: 50px;
+            border: 2px solid #fff;
 
-.carrusel .puntos .punto:hover {    
-    border: 2px solid s.$color-8;
-    cursor: pointer;
+            &:hover{
+                border: 2px solid s.$color-8;
+                cursor: pointer;        
+            }
+
+            &.activo{
+                background-color: s.$color-8;
+                border: 2px solid s.$color-8;   
+            }
+        }
+    }
 }
     
 #article{
@@ -281,7 +391,7 @@ body, html {
 
         #video-fondo{
             position: absolute;
-            min-height: 100%;
+            height: 100%;
             min-width: 100%;
             object-fit: cover;
             top: 50%;
@@ -422,9 +532,35 @@ body, html {
 
 //! ******************** MEDIA QUERYS **********************
 
+@media (max-width: 1024px) {
+
+    #article-clientes{
+
+        h2 {
+            font-size: 40px;
+            text-align: center;
+            margin-bottom: 40px;
+        }
+        
+        .container-client {
+            display: flex;
+            flex-direction: row;
+            justify-content: center;
+            
+            .img-client {
+                
+                img {
+                    width: 90px;
+                }
+                
+            }
+        }
+    }
+}
+
 //? MEDIA QUERY PARA BARRA DE NAVEGACION:
 @media (max-width: 800px){
-
+    
     #relleno {
         height: 100px;
     }
@@ -462,7 +598,7 @@ body, html {
 
                 left: 100%;
                 transition: left 300ms;
-
+                
                 &.visible {
                     left: 0%;
                 }
@@ -480,9 +616,9 @@ body, html {
             }
         }
     }
-
+    
     #footer {
-
+        
         #info {
 
             flex-direction: column;
@@ -492,12 +628,84 @@ body, html {
     }
 }
 
-@media (max-width: 320px) {
+@media (max-width: 768px) {
 
+    #article-clientes{
+
+        h2 {
+            font-size: 40px;
+            text-align: center;
+            margin-bottom: 40px;
+        }
+        
+        .container-client {
+            display: flex;
+            flex-direction: row;
+            justify-content: center;
+
+            .img-client {
+                img {
+                    width: 120px;
+                }
+                
+            }
+        }
+    }
+}
+
+@media (max-width: 426px) {
+
+    #article {
+        
+        height: 180px;
+        gap: 20px;
+
+        h2 {
+            font-size: 26px;
+        }
+    
+        p {
+            font-size: 16px;
+            
+        }
+    
+    }
+
+    #article-clientes {
+    
+        h2 {
+            font-size: 27px;
+            text-align: center;
+            margin-bottom: 40px;
+        }
+        
+        .container-client {
+            
+            .img-client {
+                
+                img {
+                    width: 100px;
+                }
+                
+            }
+        }
+    }
+    
+    #article-2 {
+        
+        h2 {
+            font-size: 23px;
+        }
+        
+        p {
+            font-size: 16px;
+        }
+    }
+    
     #footer {
-
+    
         #info {
-
+    
             #p-1 {
                font-size: 20px; 
             }
@@ -505,61 +713,65 @@ body, html {
             #p-2 {
                 font-size: 20px;
             }
-        }
-
-
+        }    
     }
+}
 
-    // #carousel {
-    //     display: none;
-    // }
-    
+@media (max-width: 320px){
+
     #article {
-
+        
         height: 180px;
-        gap: 40px;
+        gap: 20px;
+    
         h2 {
-            font-size: 22px;
+            font-size: 23px;
         }
-
+    
         p {
             font-size: 15px;
             
         }
     
     }
-
+    
     #article-clientes {
-
+    
         h2 {
-            font-size: 20px;
+            font-size: 27px;
             text-align: center;
             margin-bottom: 40px;
         }
-
+        
         .container-client {
-
+            
             .img-client {
-
+                
                 img {
-                    width: 80px;
+                    width: 100px;
                 }
-    
+                
             }
         }
     }
-
+    
     #article-2 {
-
+        
         h2 {
             font-size: 22px;
         }
-
+        
         p {
             font-size: 15px;
         }
     }
+    
 }
+
+
+
+
+
 
 
 

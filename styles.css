@@ -80,65 +80,63 @@ body, html {
 .carrusel {
   position: relative;
   width: 100%;
-  height: 450px;
+  height: 500px;
   overflow: hidden;
   display: flex;
   align-items: flex-end;
 }
-
 .carrusel .contenedor-grande {
   position: absolute;
   width: 400%;
-  height: 450px;
+  height: 500px;
   display: flex;
   flex-flow: row nowrap;
   transition: all 300ms ease;
   transform: translateX(0%);
 }
-
 .carrusel .contenedor-grande .carrusel-item {
+  position: relative;
   width: 25%;
   height: 100%;
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  overflow: hidden;
 }
-
-.carrusel .contenedor-grande .carrusel-item .img {
+.carrusel .contenedor-grande .carrusel-item .img-container {
+  position: absolute;
+  top: 0px;
+  left: 0px;
+  width: 100vw;
+  height: 100%;
+}
+.carrusel .contenedor-grande .carrusel-item .img-container .img {
   position: relative;
-  min-height: 100%;
-  min-width: 100%;
+  height: 100%;
+  width: 100%;
   object-fit: cover;
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
 }
-
 .carrusel .contenedor-grande .carrusel-item .info {
-  position: absolute;
+  position: relative;
   width: 100vw;
   padding: 0px 10px;
 }
-
-.carrusel .contenedor-grande .carrusel-item h3 {
+.carrusel .contenedor-grande .carrusel-item .info h3 {
   font-size: 40px;
   text-align: center;
   color: #fff;
   text-shadow: 1px 1px 3px black;
-  object-fit: contain;
   padding-bottom: 20px;
 }
-
-.carrusel .contenedor-grande .carrusel-item p {
+.carrusel .contenedor-grande .carrusel-item .info p {
   font-size: 20px;
   text-align: center;
   color: #fff;
   text-shadow: 1px 1px 3px black;
-  object-fit: contain;
 }
-
 .carrusel .puntos {
   position: absolute;
   width: 100%;
@@ -149,7 +147,6 @@ body, html {
   flex-flow: row wrap;
   justify-content: center;
 }
-
 .carrusel .puntos .punto {
   width: 20px;
   height: 20px;
@@ -158,15 +155,13 @@ body, html {
   border-radius: 50px;
   border: 2px solid #fff;
 }
-
-.carrusel .puntos .punto.activo {
-  background-color: #CDBE78;
-  border: 2px solid #CDBE78;
-}
-
 .carrusel .puntos .punto:hover {
   border: 2px solid #CDBE78;
   cursor: pointer;
+}
+.carrusel .puntos .punto.activo {
+  background-color: #CDBE78;
+  border: 2px solid #CDBE78;
 }
 
 #article {
@@ -242,7 +237,7 @@ body, html {
 }
 #article-2 #video-container #video-fondo {
   position: absolute;
-  min-height: 100%;
+  height: 100%;
   min-width: 100%;
   object-fit: cover;
   top: 50%;
@@ -359,6 +354,21 @@ body, html {
   opacity: 1;
 }
 
+@media (max-width: 1024px) {
+  #article-clientes h2 {
+    font-size: 40px;
+    text-align: center;
+    margin-bottom: 40px;
+  }
+  #article-clientes .container-client {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+  }
+  #article-clientes .container-client .img-client img {
+    width: 90px;
+  }
+}
 @media (max-width: 800px) {
   #relleno {
     height: 100px;
@@ -406,32 +416,75 @@ body, html {
     gap: 30px;
   }
 }
-@media (max-width: 320px) {
+@media (max-width: 768px) {
+  #article-clientes h2 {
+    font-size: 40px;
+    text-align: center;
+    margin-bottom: 40px;
+  }
+  #article-clientes .container-client {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+  }
+  #article-clientes .container-client .img-client img {
+    width: 120px;
+  }
+}
+@media (max-width: 426px) {
+  #article {
+    height: 180px;
+    gap: 20px;
+  }
+  #article h2 {
+    font-size: 26px;
+  }
+  #article p {
+    font-size: 16px;
+  }
+
+  #article-clientes h2 {
+    font-size: 27px;
+    text-align: center;
+    margin-bottom: 40px;
+  }
+  #article-clientes .container-client .img-client img {
+    width: 100px;
+  }
+
+  #article-2 h2 {
+    font-size: 23px;
+  }
+  #article-2 p {
+    font-size: 16px;
+  }
+
   #footer #info #p-1 {
     font-size: 20px;
   }
   #footer #info #p-2 {
     font-size: 20px;
   }
-
+}
+@media (max-width: 320px) {
   #article {
     height: 180px;
-    gap: 40px;
+    gap: 20px;
   }
   #article h2 {
-    font-size: 22px;
+    font-size: 23px;
   }
   #article p {
     font-size: 15px;
   }
 
   #article-clientes h2 {
-    font-size: 20px;
+    font-size: 27px;
     text-align: center;
     margin-bottom: 40px;
   }
   #article-clientes .container-client .img-client img {
-    width: 80px;
+    width: 100px;
   }
 
   #article-2 h2 {

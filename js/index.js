@@ -13,6 +13,9 @@ navbarToggle.addEventListener('click', ()=>{
     navbarMenu.classList.toggle('visible');
 })
 
+setInterval(() => {
+    
+}, 3000);
 
 carouselButton.forEach( (button, i) => {
     // console.log({cadaPunto, i});
