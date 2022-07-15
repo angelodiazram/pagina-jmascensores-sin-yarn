@@ -77,20 +77,96 @@ body, html {
   height: 120px;
 }
 
-#carousel {
+.carrusel {
   position: relative;
+  width: 100%;
+  height: 450px;
+  overflow: hidden;
+  display: flex;
+  align-items: flex-end;
 }
 
-.container-text-carousel {
+.carrusel .contenedor-grande {
+  position: absolute;
+  width: 400%;
+  height: 450px;
+  display: flex;
+  flex-flow: row nowrap;
+  transition: all 300ms ease;
+  transform: translateX(0%);
+}
+
+.carrusel .contenedor-grande .carrusel-item {
+  width: 25%;
+  height: 100%;
   display: flex;
   flex-direction: column;
-  align-content: center;
+  justify-content: center;
+  align-items: center;
+  overflow: hidden;
 }
-.container-text-carousel .h3-carousel {
-  text-shadow: 2px 2px 3px black;
+
+.carrusel .contenedor-grande .carrusel-item .img {
+  position: relative;
+  min-height: 100%;
+  min-width: 100%;
+  object-fit: cover;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
 }
-.container-text-carousel .p-carousel {
-  text-shadow: 2px 2px 3px black;
+
+.carrusel .contenedor-grande .carrusel-item .info {
+  position: absolute;
+  width: 100vw;
+  padding: 0px 10px;
+}
+
+.carrusel .contenedor-grande .carrusel-item h3 {
+  font-size: 40px;
+  text-align: center;
+  color: #fff;
+  text-shadow: 1px 1px 3px black;
+  object-fit: contain;
+  padding-bottom: 20px;
+}
+
+.carrusel .contenedor-grande .carrusel-item p {
+  font-size: 20px;
+  text-align: center;
+  color: #fff;
+  text-shadow: 1px 1px 3px black;
+  object-fit: contain;
+}
+
+.carrusel .puntos {
+  position: absolute;
+  width: 100%;
+  background-color: none;
+  padding: 20px 0px;
+  gap: 10px;
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: center;
+}
+
+.carrusel .puntos .punto {
+  width: 20px;
+  height: 20px;
+  background-color: transparent;
+  list-style: none;
+  border-radius: 50px;
+  border: 2px solid #fff;
+}
+
+.carrusel .puntos .punto.activo {
+  background-color: #CDBE78;
+  border: 2px solid #CDBE78;
+}
+
+.carrusel .puntos .punto:hover {
+  border: 2px solid #CDBE78;
+  cursor: pointer;
 }
 
 #article {
@@ -98,8 +174,6 @@ body, html {
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  align-items: center;
-  flex-direction: column;
   height: 250px;
   background-color: #045455;
 }
@@ -129,11 +203,8 @@ body, html {
 #article-clientes h2 {
   color: #212121;
   font-size: 40px;
-  text-shadow: 1px 1px 3px grey;
   margin: 20px 0px;
-}
-#article-clientes img {
-  width: 130px;
+  text-align: center;
 }
 #article-clientes .container-client {
   display: flex;
@@ -141,10 +212,14 @@ body, html {
   flex-wrap: wrap;
   gap: 40px;
   padding-bottom: 10px;
-  justify-content: space-around;
+  margin-bottom: 20px;
+  justify-content: space-evenly;
 }
-#article-clientes .img-client {
+#article-clientes .container-client .img-client {
   box-shadow: 1px 1px 3px grey;
+}
+#article-clientes .container-client .img-client img {
+  width: 130px;
 }
 
 #article-2 {
@@ -337,6 +412,33 @@ body, html {
   }
   #footer #info #p-2 {
     font-size: 20px;
+  }
+
+  #article {
+    height: 180px;
+    gap: 40px;
+  }
+  #article h2 {
+    font-size: 22px;
+  }
+  #article p {
+    font-size: 15px;
+  }
+
+  #article-clientes h2 {
+    font-size: 20px;
+    text-align: center;
+    margin-bottom: 40px;
+  }
+  #article-clientes .container-client .img-client img {
+    width: 80px;
+  }
+
+  #article-2 h2 {
+    font-size: 22px;
+  }
+  #article-2 p {
+    font-size: 15px;
   }
 }
 * {

@@ -100,35 +100,109 @@ body, html {
     height: 120px;
 }
 
-#carousel{
+//! CODIGO DE ESTILOS CARRUSEL ORIGINAL:
+.carrusel{
     position: relative;
-}
-
-.container-text-carousel {
-    
+    width: 100%;
+    height: 450px;
+    overflow: hidden;
     display: flex;
-    flex-direction: column;
-    align-content: center;
+    align-items: flex-end;
+}
 
-    .h3-carousel{
-        text-shadow: s.$text-shadow;
-    }
-
-    .p-carousel{
-        text-shadow: s.$text-shadow;
-    }
+.carrusel .contenedor-grande{
+    position: absolute;
+    width: 400%;
+    height: 450px;
+    display: flex;
+    flex-flow: row nowrap;
+    
+    transition: all 300ms ease;
+    transform: translateX(0%);
 
 }
 
-
-
-#article{
+.carrusel .contenedor-grande .carrusel-item {
+    width: calc(100% /4);
+    height: 100%;
+    
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    align-items: center;
+    overflow: hidden;
+    
+}
+
+.carrusel .contenedor-grande .carrusel-item .img {
+    position: relative;
+    min-height: 100%;
+    min-width: 100%;
+    object-fit: cover;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.carrusel .contenedor-grande .carrusel-item .info{
+    position: absolute;
+    width: 100vw;
+    padding: 0px 10px;
+}
+
+.carrusel .contenedor-grande .carrusel-item h3 {
+    font-size: 40px;
+    text-align: center;
+    color: #fff;
+    text-shadow: 1px 1px 3px black;
+    object-fit: contain;
+    padding-bottom: 20px;
+}
+
+.carrusel .contenedor-grande .carrusel-item p {
+    font-size: 20px;
+    text-align: center;
+    color: #fff;
+    text-shadow: 1px 1px 3px black;
+    object-fit: contain;
+}
+
+.carrusel .puntos {
+    position: absolute;
+    width: 100%;
+    background-color: none;
+    padding: 20px 0px;
+    gap: 10px;
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: center; 
+}
+
+.carrusel .puntos .punto {
+    width: 20px;
+    height: 20px;
+    background-color: transparent;
+    list-style: none;
+    border-radius: 50px;
+    border: 2px solid #fff;
+}
+
+.carrusel .puntos .punto.activo {
+    background-color: s.$color-8;
+    border: 2px solid s.$color-8;
+}
+
+.carrusel .puntos .punto:hover {    
+    border: 2px solid s.$color-8;
+    cursor: pointer;
+}
+    
+#article{
+
+    display: flex;
     flex-direction: column;
+    justify-content: center;
+    align-items: center;
     height: 250px;
     background-color: s.$color-7;
 
@@ -143,32 +217,28 @@ body, html {
         position: relative;
         color: white;
         text-shadow: s.$text-shadow;
-        // font-family: Verdana, Geneva, Tahoma, sans-serif;
         font-size: 20px;
         text-align: center;
     }
 }
 
 #article-clientes {
+    
+    h2{
+        color: s.$color-6;
+        font-size: 40px;
+        // text-shadow: 1px 1px 3px grey;
+        margin: 20px 0px;
+        text-align: center;
+    }
+
     display: flex;
     flex-direction: column;
     justify-content: space-evenly;
     align-items: center;
-
     width: 100%;
     min-height: 300px;
     padding: 10px;
-
-    h2{
-        color: s.$color-6;
-        font-size: 40px;
-        text-shadow: 1px 1px 3px grey;
-        margin: 20px 0px;
-    }
-    
-    img {
-        width: 130px;
-    }
 
     .container-client {
         display: flex;
@@ -176,17 +246,18 @@ body, html {
         flex-wrap: wrap;
         gap: 40px;
         padding-bottom: 10px;
-        justify-content: space-around;
+        margin-bottom: 20px;
+        justify-content: space-evenly;
+
+        .img-client{
+            box-shadow: 1px 1px 3px grey;
+
+            img {
+                width: 130px;
+            }
+        }
     }
-
-    .img-client{
-        box-shadow: 1px 1px 3px grey;
-    }
-
-
 }
-
-
 
 #article-2{
     position: relative;
@@ -419,7 +490,6 @@ body, html {
             gap: 30px;
         }
     }
-
 }
 
 @media (max-width: 320px) {
@@ -439,7 +509,58 @@ body, html {
 
 
     }
+
+    // #carousel {
+    //     display: none;
+    // }
+    
+    #article {
+
+        height: 180px;
+        gap: 40px;
+        h2 {
+            font-size: 22px;
+        }
+
+        p {
+            font-size: 15px;
+            
+        }
+    
+    }
+
+    #article-clientes {
+
+        h2 {
+            font-size: 20px;
+            text-align: center;
+            margin-bottom: 40px;
+        }
+
+        .container-client {
+
+            .img-client {
+
+                img {
+                    width: 80px;
+                }
+    
+            }
+        }
+    }
+
+    #article-2 {
+
+        h2 {
+            font-size: 22px;
+        }
+
+        p {
+            font-size: 15px;
+        }
+    }
 }
+
 
 
 
